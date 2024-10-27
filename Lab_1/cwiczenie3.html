@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ćwiczenie 3: Kolorowe kwadraty</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+      .row {
+        display: flex;
+        margin-bottom: 10px;
+      }
+      .kwadrat {
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+      }
+      .row:nth-child(1) .kwadrat:last-child,
+      .row:nth-child(2) .kwadrat:last-child {
+        margin-right: 0;
+      }
+      .kwadrat1 {
+        background-color: rgb(166, 102, 203);
+      }
+      .kwadrat2 {
+        background-color: rgb(103, 210, 50);
+      }
+      .kwadrat3 {
+        background-color: rgb(242, 89, 201);
+      }
+      .kwadrat4 {
+        background-color: rgb(159, 74, 98);
+      }
+      .kwadrat5 {
+        background-image: url("bulbazar.png");
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Kolorowe Kwadraty</h1>
+    <div class="container">
+      <div class="row">
+        <div class="kwadrat kwadrat1"></div>
+        <div class="kwadrat kwadrat2"></div>
+      </div>
+
+      <div class="row">
+        <div class="kwadrat kwadrat3"></div>
+        <div class="kwadrat kwadrat4"></div>
+        <div class="kwadrat kwadrat5"></div>
+      </div>
+    </div>
+  </body>
+</html>
