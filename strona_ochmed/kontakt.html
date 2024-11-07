@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body id = "fioletowy">
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="index.html" id="navbar__logo">
+            <img src="img_och/logo_new.png" alt="logo przychodni" class="logo-image"/>
+        </a>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+              <a href="index.html" class="navbar__links"> Strona Główna </a>
+            </li>
+            <li class="navbar__item">
+              <a href="personel.html" class="navbar__links"> Personel </a>
+            </li>
+            <li class="navbar__item">
+              <a href="kontakt.html" class="navbar__links"> Kontakt </a>
+            </li>
+            <li class="navbar__btn">
+              <a href="formularz.html" class="button"> UMÓW SIĘ </a>
+      </div>
+    </nav>
+
+    <div class = "kontakt-intro">
+        <h2>Chcesz nas o czymś poinformować?</h2>
+        <p>Napisz do nas wiadomość na e-mail: ochmed@gmail.com, <br>albo uzupełnij poniższy formularz:</p>
+
+    </div>
+
+    <form action="#" method="get">
+        <div>
+            <label for="first-name">Imię:</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Wpisz swoje imię" required>
+        </div>
+    
+        <div>
+            <label for="last-name">Nazwisko:</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Wpisz swoje nazwisko" required>
+        </div>
+        <div>
+            <label for="email">Adres e-mail:</label>
+            <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+        </div>
+
+        <div>
+            <label for="message">Wiadomość:</label>
+            <textarea id="message" name="message" placeholder="Wpisz swoją wiadomość tutaj" required></textarea>
+        </div>
+        <input type="submit" value="Wyślij wiadomość">
+    </form>
+
+
+    <footer class="footer">
+        Agnieszka Dąbek
+    </footer>
+  </body>
+</html>
