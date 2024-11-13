@@ -5,57 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav class="navbar">
       <div class="navbar__container">
         <a href="index.html" id="navbar__logo">
-            <img src="img_och/logo_new.png" alt="logo przychodni" class="logo-image"/>
+          <img
+            src="img_och/logo_new.png"
+            alt="logo przychodni"
+            class="logo-image"
+          />
         </a>
+
         <ul class="navbar__menu">
-            <li class="navbar__item">
-              <a href="index.html" class="navbar__links"> Strona Główna </a>
-            </li>
-            <li class="navbar__item">
-              <a href="personel.html" class="navbar__links"> Personel </a>
-            </li>
-            <li class="navbar__item">
-              <a href="kontakt.html" class="navbar__links"> Kontakt </a>
-            </li>
-            <li class="navbar__btn">
-              <a href="formularz.html" class="button"> UMÓW SIĘ </a>
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__links"> Strona Główna </a>
+          </li>
+          <li class="navbar__item">
+            <a href="personel.html" class="navbar__links"> Personel </a>
+          </li>
+          <li class="navbar__item">
+            <a href="kontakt.html" class="navbar__links"> Kontakt </a>
+          </li>
+          <li class="navbar__btn">
+            <a href="formularz.html" class="button"> UMÓW SIĘ </a>
+          </li>
+        </ul>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       </div>
     </nav>
 
-
     <div class="main">
-        <div class="main__container">
-            <div class="main__content">
-                <h1>Witamy <br>
-                na stronie przychodni OCHMED</h1>
-                <p>
-                    Zapraszamy na wizyty do naszych specjalistów<br><br>
-                    Jesteśmy otwarci:
-                </p>
-                <ul>
-                    <li>pn-pt: 7.00-18.00</li>
-                    <li>sb: 8.00-14.00</li>
-                    <li>nd: nieczynne</li>
-                </ul>
-                
-            </div>
-            <div class="main__img_container">
-                <img src="img_och/obr_ochm.svg" alt="logo przychodni" id="main__img"/>
-            </div>  
+      <div class="main__container">
+        <div class="main__content">
+          <h1>
+            Witamy <br />
+            na stronie przychodni OCHMED
+          </h1>
+          <p>
+            Zapraszamy na wizyty do naszych specjalistów<br /><br />
+            Jesteśmy otwarci:
+          </p>
+          <ul>
+            <li>pn-pt: 7.00-18.00</li>
+            <li>sb: 8.00-14.00</li>
+            <li>nd: nieczynne</li>
+          </ul>
         </div>
+        <div class="main__img_container">
+          <img
+            src="img_och/obr_ochm.svg"
+            alt="logo przychodni"
+            id="main__img"
+          />
+        </div>
+      </div>
     </div>
 
-    <footer class="footer">
-        Agnieszka Dąbek
-    </footer>
+    <footer class="footer">Agnieszka Dąbek</footer>
 
+    <script src="script.js"></script>
   </body>
 </html>
