@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Generator haseł</title>
+  </head>
+  <body>
+    <h1>Generator haseł</h1>
+    <label for="minLength">Minimalna długość hasła:</label>
+    <input type="text" id="minLength" /><br /><br />
+
+    <label for="maxLength">Maksymalna długość hasła:</label>
+    <input type="text" id="maxLength" /><br /><br />
+
+    <label for="includeUppercase">Czy hasło ma zawierać wielkie litery?</label>
+    <input type="checkbox" id="includeUppercase" /><br /><br />
+
+    <label for="includeSpecial">Czy hasło ma zawierać znaki specjalne?</label>
+    <input type="checkbox" id="includeSpecial" /><br /><br />
+
+    <button onclick="generatePassword()">Wygeneruj hasło</button>
+
+    <script>
+      function generatePassword() {
+        var minLength = parseInt(document.getElementById("minLength").value);
+        var maxLength = parseInt(document.getElementById("maxLength").value);
+        var includeUppercase =
+          document.getElementById("includeUppercase").checked;
+        var includeSpecial = document.getElementById("includeSpecial").checked;
+
+        if (
+          isNaN(minLength) ||
+          isNaN(maxLength) ||
+          minLength > maxLength ||
+          minLength <= 0
+        ) {
+          alert("Proszę podać poprawne wartości długości hasła.");
+          return;
+        }
+
+        var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+        var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var numbers = "0123456789";
+        var specialChars = "!@#$%^&*()_+~`|}{[]\\:;?><,./-=";
+
+        var allChars = lowercaseChars + numbers;
+        if (includeUppercase) {
+          allChars += uppercaseChars;
+        }
+        if (includeSpecial) {
+          allChars += specialChars;
+        }
+
+        var requiredChars = "";
+        if (includeUppercase) {
+          requiredChars += uppercaseChars.charAt(
+            Math.floor(Math.random() * uppercaseChars.length)
+          );
+        }
+        if (includeSpecial) {
+          requiredChars += specialChars.charAt(
+            Math.floor(Math.random() * specialChars.length)
+          );
+        }
+
+        var passwordLength =
+          Math.floor(Math.random() * (maxLength - minLength + 1)) + minLength;
+        var remainingLength = passwordLength - requiredChars.length;
+
+        if (remainingLength < 0) {
+          alert("Nie ma odpowiedniego hasła dla wybranych opcji.");
+          return;
+        }
+
+        var password = "";
+        for (var i = 0; i < remainingLength; i++) {
+          var randomIndex = Math.floor(Math.random() * allChars.length);
+          password += allChars.charAt(randomIndex);
+        }
+
+        password += requiredChars;
+
+        password = password
+          .split("")
+          .sort(function () {
+            return 0.5 - Math.random();
+          })
+          .join("");
+
+        alert("Wygenerowane hasło: " + password);
+      }
+    </script>
+  </body>
+</html>
